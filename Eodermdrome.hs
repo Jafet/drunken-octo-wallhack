@@ -22,6 +22,8 @@ The rules are matched using brute force search. Low-hanging improvements:
 The interpreter tries rules with no input sets first, so that it does not
 read the input unnecessarily. If the program is nondeterministic, this
 might starve rules with input sets.
+The interpreter will also not halt if it is blocked on input, even if
+no rules would match. Fixing this requires concurrency.
 
 
 Legalese
